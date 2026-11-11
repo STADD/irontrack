@@ -37,7 +37,7 @@ export default function LogoutButton() {
     >
       <LogOut size={17} />
       <span className="text-xs">
-        {loading ? "Signing out..." : "Logout"}
+        {"Logout"}
       </span>
     </button>
   );

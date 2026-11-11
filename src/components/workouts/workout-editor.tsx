@@ -524,11 +524,6 @@ export default function WorkoutEditor({
             Record your sets and track your progress.
           </p>
         </div>
-
-        <div className="flex items-center gap-2 rounded-xl border border-zinc-800 bg-[#111113] px-4 py-3 text-sm tabular-nums text-zinc-300">
-          <span className="text-lime-400">●</span>
-          {formatTime(seconds)}
-        </div>
       </div>
 
       {error && (

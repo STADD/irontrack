@@ -98,7 +98,7 @@ export default function Sidebar() {
         <div className="mt-5 border-t border-zinc-800 pt-5">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800 text-sm font-semibold text-white">
-              JD
+              {username[0]}
             </div>
 
             <div className="flex-1">

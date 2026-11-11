@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 
 import Sidebar from "@/components/dashboard/sidebar";
 import Header from "@/components/dashboard/header";
+import LogoutButton from "@/components/dashboard/logout-button";
 
 import { auth } from "@/lib/auth";
 
@@ -56,6 +57,8 @@ export default async function DashboardLayout({
           <ChartNoAxesCombined size={20} />
           <span className="text-[10px]">Progress</span>
         </Link>
+
+        <LogoutButton />
       </nav>
     </div>
   );

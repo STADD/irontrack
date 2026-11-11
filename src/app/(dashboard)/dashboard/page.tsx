@@ -16,6 +16,8 @@ import RecentWorkouts from "@/components/dashboard/recent-workouts";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
+export const instant = false
+
 function formatDuration(
   startedAt: Date,
   finishedAt: Date | null

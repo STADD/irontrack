@@ -27,7 +27,7 @@ import {
   toggleWorkoutSet,
   updateWorkoutName,
   updateWorkoutSet,
-} from "@/app/(dashboard)/workouts/actions";
+} from "@/components/workouts/actions";
 
 interface WorkoutEditorProps {
   workout: {

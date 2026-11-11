@@ -5,6 +5,8 @@ import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
+const instant = false;
+
 async function requireUserId() {
   const session = await auth.api.getSession({
     headers: await headers(),

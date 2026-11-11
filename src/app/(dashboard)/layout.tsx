@@ -14,6 +14,8 @@ import {
   ChartNoAxesCombined,
 } from "lucide-react";
 
+export const instant = false
+
 export default async function DashboardLayout({
   children,
 }: {

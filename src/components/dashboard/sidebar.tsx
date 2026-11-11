@@ -31,8 +31,23 @@ const navigation = [
   },
 ];
 
+import { useEffect, useState } from "react";
+
 export default function Sidebar() {
   const pathname = usePathname();
+
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    async function getUser() {
+      const res = await fetch("/api/user");
+      const data = await res.json();
+
+      setUsername(data.name || "User");
+    }
+
+    getUser();
+  }, []);
 
   return (
     <aside className="fixed left-0 top-0 z-40 hidden h-screen w-64 flex-col border-r border-zinc-800 bg-[#09090b] px-5 py-6 md:flex">
@@ -88,10 +103,7 @@ export default function Sidebar() {
 
             <div className="flex-1">
               <p className="text-sm font-medium text-white">
-                John Doe
-              </p>
-              <p className="text-xs text-zinc-500">
-                Free account
+                {username}
               </p>
             </div>
 

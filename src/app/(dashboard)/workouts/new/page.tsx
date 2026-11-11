@@ -5,6 +5,8 @@ import WorkoutEditor from "@/components/workouts/workout-editor";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
+export const instant = false
+
 export default async function NewWorkoutPage() {
   const session = await auth.api.getSession({
     headers: await headers(),

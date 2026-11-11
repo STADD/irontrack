@@ -143,14 +143,17 @@ export default function WorkoutEditor({
         );
 
   const runAction = (
-    action: () => Promise<unknown>
+    action: () => Promise<unknown>,
+    refresh = true
   ) => {
     setError("");
 
     startTransition(async () => {
       try {
         await action();
-        router.refresh();
+        if (refresh){
+          router.refresh();
+        }
       } catch (cause) {
         setError(
           cause instanceof Error
@@ -429,7 +432,9 @@ export default function WorkoutEditor({
       await finishWorkout(workout.id);
 
       setFinished(true);
-    });
+    },
+    false
+    );
   };
 
   if (finished) {

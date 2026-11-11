@@ -36,9 +36,6 @@ export default function LogoutButton() {
       className="flex items-center gap-2 text-zinc-500 hover:text-red-400 disabled:opacity-50"
     >
       <LogOut size={17} />
-      <span className="text-xs">
-        {"Logout"}
-      </span>
     </button>
   );
 }

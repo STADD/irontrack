@@ -126,6 +126,7 @@ export default async function NewWorkoutPage() {
         id: workout.id,
         name: workout.name,
         startedAt: workout.startedAt.toISOString(),
+	finishedAt: workout.finishedAt?.toISOString() ?? null,
         exercises: workout.exercises.map((item) => ({
           id: item.id,
           name: item.exercise.name,

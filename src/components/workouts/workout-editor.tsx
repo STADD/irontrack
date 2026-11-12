@@ -34,6 +34,7 @@ interface WorkoutEditorProps {
     id: string;
     name: string;
     startedAt: string;
+    finishedAt: string | null;
     exercises: WorkoutExercise[];
   };
 
@@ -63,7 +64,10 @@ export default function WorkoutEditor({
     )
   );
 
-  const [finished, setFinished] = useState(false);
+  const [finished, setFinished] = useState(
+    Boolean(workout.finishedAt)
+  );
+
   const [error, setError] = useState("");
 
   const [isPending, startTransition] = useTransition();
